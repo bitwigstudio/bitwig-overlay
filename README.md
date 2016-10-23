@@ -24,4 +24,4 @@ As a security measure layman will ask for confirmation before this overlay is ad
 You can now install included applications as usual using emerge.
 
 # Bug, comments and requests
-Please post a tickethere on GitHub. 
+Please post a ticket here on GitHub. 
