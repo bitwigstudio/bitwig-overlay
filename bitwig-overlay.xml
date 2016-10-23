@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repositories encoding="UTF-8" version="1.1">
+  <repo priority="50" quality="experimental">
+    <name>bitwig-overlay</name>
+    <description>Overlay for Bigwig Studio software</description>
+    <homepage>https://github.com/Ridderby/bitwig-overlay</homepage>
+    <owner>
+      <email>tech@rby.nu</email>
+      <name>Erik Ridderby</name>
+    </owner>
+    <source type="git">https://github.com/Ridderby/bitwig-overlay.git</source>
+  </repo>
+</repositories>
