@@ -1,27 +1,52 @@
 # Bitwig Overlay
-Bitwig is one of the few delivering commercial studio software for Linux. Software is available as .deb-files and updated quite regular. The purpose of this overlay is to simplify the installation and upgrade of Bitwig Studio and possibly accompanying software later on.
+Bitwig is one of the few delivering commercial studio software for Linux. Software is available as .deb files and updated quite
+regulary. The purpose of this overlay is to simplify the installation and upgrade of Bitwig Studio and possibly accompanying
+software later on.
+
 
 # Usage instuctions
 ## Dependencies
 
-This is an overlay developed and tested on Funtoo Linux. It should probably work very well in Gentoo and Sabayon Linux as well, however I have no means to verify that. 
-Overlays in general depends on layman and the assumption here relies on layman being installed. 
+This is an overlay developed and tested on Funtoo/Gentoo Linux. It should probably work very well in Sabayon Linux as
+well, however we have no means to verify that.
 
 
 ## Installation
-A non officcial overlay (as this is) is not directly fetchable with layman. You have to manually register the overlay. 
+### General
+```bash
+# make sure the repo directory exists
+mkdir /etc/portage/repos.conf
 
-Start by copying  `bitwig-overlay.xml` into `/etc/layman/overlays`
+# install our repo
+cat << 'EOF' > /etc/portage/repos.conf/bitwig-overlay.conf
+[bitwig-overlay]
+location = /usr/local/portage/bitwig-overlay
+sync-type = git
+sync-uri = https://github.com/bitwigstudio/bitwig-overlay.git
+EOF
 
-Run `layman-updater -R` to re-read the overlay-directory.
+# sync
+emaint -r bitwig-overlay sync
+```
 
-You will now also have to run `layman -L` to list all overlays or layman will not find syncthing-overlay. 
+### Beta
+If you're one of the lucky individuals that have been chosen to beta test it, here's how to install those versions:
 
-Finally add the overlay to portage: `layman -a bitwig-overlay`
+```bash
+# Go to your Bitwig online account and get the .deb file for the beta version via your browser
 
-As a security measure layman will ask for confirmation before this overlay is added. 
+# move the file to where portage stores the distfiles
+mv ~/Downloads//usr/portage/distfiles/bitwig-studio-2.0beta.deb /usr/portage/distfiles/
 
-You can now install included applications as usual using emerge.
+# fix permissions
+chown portage:portage /usr/portage/distfiles/bitwig-studio-2.0beta.deb
+
+# proceed with installation
+emerge -a =bitwig-studio-2.0beta
+```
+
+For more information on the subject, please, check: https://wiki.gentoo.org/wiki//etc/portage/repos.conf
+
 
 # Bug, comments and requests
-Please post a ticket here on GitHub. 
+Please post a ticket here on GitHub.
