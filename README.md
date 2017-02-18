@@ -32,6 +32,8 @@ emaint -r bitwig-overlay sync
 emerge -a bitwig-studio
 ```
 
+For more information on the subject, please, check: https://wiki.gentoo.org/wiki//etc/portage/repos.conf
+
 ### Beta
 If you're one of the lucky individuals that have been chosen to beta test it, here's how to install those versions:
 
@@ -48,7 +50,8 @@ chown portage:portage /usr/portage/distfiles/bitwig-studio-2.0beta.deb
 emerge -a =bitwig-studio-2.0beta
 ```
 
-For more information on the subject, please, check: https://wiki.gentoo.org/wiki//etc/portage/repos.conf
+Please, note that any bugs related to beta versions, should go to Bitwig itself and not to us. The current method for this is
+joining their beta mailing list: https://groups.google.com/forum/#!forum/bitwig-beta-group
 
 
 # Bug, comments and requests
