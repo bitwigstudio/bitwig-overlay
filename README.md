@@ -27,6 +27,9 @@ EOF
 
 # sync
 emaint -r bitwig-overlay sync
+
+# install
+emerge -a bitwig-studio
 ```
 
 ### Beta
