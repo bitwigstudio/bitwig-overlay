@@ -19,6 +19,7 @@ IUSE="libav"
 DEPEND=""
 RDEPEND="${DEPEND}
 		dev-java/jython
+		dev-java/oracle-jre-bin:1.8
 		dev-libs/expat
 		dev-libs/libbsd
 		gnome-extra/zenity
@@ -28,8 +29,8 @@ RDEPEND="${DEPEND}
 		media-libs/freetype
 		media-libs/libpng:0/16
 		media-libs/mesa
+		media-sound/jack2
 		virtual/jack
-		virtual/jre:1.8
 		virtual/opengl
 		virtual/udev
 		x11-libs/cairo[xcb]

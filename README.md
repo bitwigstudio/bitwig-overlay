@@ -34,25 +34,8 @@ emerge -a bitwig-studio
 
 For more information on the subject, please, check: https://wiki.gentoo.org/wiki//etc/portage/repos.conf
 
-### Beta
-If you're one of the lucky individuals that have been chosen to beta test it, here's how to install those versions:
-
-```bash
-# Go to your Bitwig online account and get the .deb file for the beta version via your browser
-
-# move the file to where portage stores the distfiles
-mv ~/Downloads//usr/portage/distfiles/bitwig-studio-2.0beta.deb /usr/portage/distfiles/
-
-# fix permissions
-chown portage:portage /usr/portage/distfiles/bitwig-studio-2.0beta.deb
-
-# proceed with installation
-emerge -a =bitwig-studio-2.0beta
-```
-
-Please, note that any bugs related to beta versions, should go to Bitwig itself and not to us. The current method for this is
-joining their beta mailing list: https://groups.google.com/forum/#!forum/bitwig-beta-group
-
+# java
+We have removed the bundled jre binary so we can setup and use a system-wide version. Please, read: https://wiki.gentoo.org/wiki/Java in order to be able to setup `oracle-jre-bin`.
 
 # Bug, comments and requests
 Please post a ticket here on GitHub.
